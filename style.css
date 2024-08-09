@@ -1,0 +1,191 @@
+.container-one {
+    display: inline-grid;
+    position: relative;
+    width: 250px;
+    height: 450px;
+    margin-left:200px;
+    background-color: #ddd;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+ 
+}
+.container-one div{
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.black {
+ 
+    background-color: black;
+    color: white;
+}
+.white {
+    
+    background-color: white;
+
+}
+
+.container-one::after {
+    position: absolute;
+    content: "";
+    background-color: orange;
+    width:30px;
+    height: 30px;
+    top: 15px;
+    left: 210px;
+    right: 0;
+    bottom: 0;
+    animation-name: one;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-delay: 3s;
+}
+@keyframes one{
+    0%{
+        top: 15px;
+        left: 210px;
+        right: 0;
+        bottom: 0;
+    }
+    
+    
+    11% {
+        top: 15px;
+        left: 15px;
+        right: 0;
+        bottom: 0;
+
+    }
+
+    22% {
+    top: 207px;
+    left: 15px;
+    right: 0;
+    bottom: 0;
+
+    }
+    33% {
+        top: 207px;
+        left: 210px;
+        right: 0;
+        bottom: 0;
+    }
+    44%{
+        top: 207px;
+        left: 15px;
+        right: 0;
+        bottom: 0;
+    
+    }
+    55% {
+        top: 404px;
+        left: 15px;
+        right: 0;
+        bottom: 0;
+    }
+    66% {
+        top: 404px;
+        left: 210px;
+        right: 0;
+        bottom: 0;
+    }
+    77% {
+        top: 404px;
+        left: 15px;
+        right: 0;
+        bottom: 0;
+    }
+    88%{
+        
+            top: 15px;
+            left: 15px;
+            right: 0;
+            bottom: 0;
+    
+        
+    }
+    100% {
+        top: 15px;
+        left: 210px;
+        right: 0;
+        bottom: 0;
+    
+    }
+}
+
+.container-two {
+    display: inline-grid;
+    position: relative;
+    width: 250px;
+    height: 450px;
+    margin: auto;
+    background-color: #ddd;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+ 
+}
+.container-two::after {
+    position: absolute;
+    content: "";
+    background-color: orange;
+    width:30px;
+    height: 30px;
+    top: 404px;
+    left: 210px;
+    right: 0;
+    bottom: 0;
+    animation-name: two;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+
+   
+}
+@keyframes two {
+    0% {
+        top: 404px;
+        left: 210px;
+        right: 0;
+        bottom: 0;
+    }
+    50% {
+        top: 404px;
+        left: 15px;
+        right: 0;
+        bottom: 0;
+    }
+    100%{
+        top: 15px;
+        left: 15px;
+        right: 0;
+        bottom: 0;
+    }
+   
+}
+.container-two::before {
+    position: absolute;
+    content: "";
+    background-color: transparent;
+    width:30px;
+    height: 30px;
+    top: 15px;
+    left: 15px;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    animation-name: to-black;
+    animation-duration: 1s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+@keyframes to-black {
+    to {
+        background-color: black;
+    }
+
+}
